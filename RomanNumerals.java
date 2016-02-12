@@ -7,10 +7,10 @@ import javax.swing.JOptionPane;
  */
 public class RomanNumerals 
 {
-public static String IntegerToRoman(int a)
+public static String toRoman(int a)
     {
         
-        String romanNum = "";
+        String finRoman = "";
         int numLet;
         
         String letters[] = {"M","CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", 
@@ -22,11 +22,11 @@ public static String IntegerToRoman(int a)
             numLet = a/numbers[x];
             for(int i = 1; i <= numLet; i++)
             {
-                romanNum = romanNum + letters[x];
+                finRoman = finRoman + letters[x];
             }
               a = a % numbers[x];
         }
-        return romanNum;
+        return finRoman;
     }
  
     public static void main(String args[])
@@ -35,7 +35,7 @@ public static String IntegerToRoman(int a)
         String number = JOptionPane.showInputDialog("Enter the number you wish to "
                 + "convert to Roman Numerals:") ;
         int num = Integer.parseInt(number) ;
-        System.out.println(number + ": "+IntegerToRoman(num));
+        System.out.println(number + ": "+toRoman(num));
        
         String another = "";
        
@@ -57,7 +57,7 @@ public static String IntegerToRoman(int a)
                number = JOptionPane.showInputDialog("Enter the number you wish to "
                        + "convert to Roman Numerals:") ;
                num = Integer.parseInt(number) ;
-               System.out.println(number + ": "+IntegerToRoman(num));		
+               System.out.println(number + ": "+toRoman(num));		
 
               }
             }              
