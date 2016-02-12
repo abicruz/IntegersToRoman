@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  */
 public class RomanNumerals 
 {
-public static String IntegerToRoman(int n)
+public static String IntegerToRoman(int a)
     {
         
         String romanNum = "";
@@ -18,14 +18,14 @@ public static String IntegerToRoman(int n)
         String letters[]={"M","CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", 
             "V", "IV", "I"};
   
-        for(int x=0; n>0; x++)
+        for(int x=0; a>0; x++)
         {
-            numLet = n/numbers[x];
+            numLet = a/numbers[x];
             for(int i = 1; i <= numLet; i++)
             {
                 romanNum = romanNum + letters[x];
             }
-            n = n % numbers[x];
+              a = a % numbers[x];
         }
         return romanNum;
     }
